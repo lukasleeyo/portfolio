@@ -1,3 +1,4 @@
+//shoostress section
 var slideIndex = 1;
 showDivs(slideIndex);
 
@@ -16,7 +17,7 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";  
 }
 
-
+//competition portion
 var slideCompIndex = 1;
 showCompDivs(slideCompIndex);
 
@@ -33,4 +34,23 @@ function showCompDivs(n) {
      x[i].style.display = "none";  
   }
   x[slideCompIndex-1].style.display = "block";  
+}
+
+//FoodComn portion
+var slidefoodIndex = 1;
+showFoodDivs(slidefoodIndex);
+
+function plusFoodDivs(n) {
+  showFoodDivs(slidefoodIndex += n);
+}
+
+function showFoodDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("myFoodSlides");
+  if (n > x.length) {slidefoodIndex = 1}    
+  if (n < 1) {slidefoodIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slidefoodIndex-1].style.display = "block";  
 }
