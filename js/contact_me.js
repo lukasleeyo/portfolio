@@ -13,6 +13,12 @@ $(function() {
       var email = $("input#email").val();
       var phone = $("input#phone").val();
       var message = $("textarea#message").val();
+      var data = {
+        name : name,
+        phone : phone,
+        email : email,
+        message : message
+      };
       var firstName = name; // For Success/Failure Message
       // Check for white space in name for Success/Fail message
       if (firstName.indexOf(' ') >= 0) {
@@ -23,14 +29,10 @@ $(function() {
       $.ajax({
         url: URL,
         type: "POST",
-        data: JSON.stringify({
-          name: name,
-          phone: phone,
-          email: email,
-          message: message
-        }),
+        data: JSON.stringify(data),
         dataType: 'json',
         crossDomain: "true",
+        contentType: "application/json; charset=utf-8",
         cache: false,
         success: function() {
           // Success message
