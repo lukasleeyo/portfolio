@@ -29,6 +29,7 @@ $(function() {
           email: email,
           message: message
         },
+        crossDomain: "true",
         cache: false,
         success: function() {
           // Success message
