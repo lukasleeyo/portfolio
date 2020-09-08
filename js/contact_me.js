@@ -28,16 +28,9 @@ $(function () {
       $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
       $.ajax({
         url: URL,
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
-          'Access-Control-Allow-Credentials': true,
-          'Content-Type': 'application/json'
-        },
         type: "POST",
         data: JSON.stringify(data),
         dataType: 'json',
-        crossDomain: "true",
         contentType: "application/json; charset=utf-8",
         cache: false,
         success: function () {
