@@ -7,7 +7,7 @@ $(function() {
     },
     submitSuccess: function($form, event) {
       event.preventDefault(); // prevent default submit behaviour
-      var URL = "https://xgmp9zvj7k.execute-api.ap-southeast-1.amazonaws.com/prod/";
+      var URL = "https://q6gjubq5mh.execute-api.ap-southeast-1.amazonaws.com/contact-us";
       // get values from FORM
       var name = $("input#name").val();
       var email = $("input#email").val();
