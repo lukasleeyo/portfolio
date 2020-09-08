@@ -7,6 +7,7 @@ $(function() {
     },
     submitSuccess: function($form, event) {
       event.preventDefault(); // prevent default submit behaviour
+      var URL = "https://xgmp9zvj7k.execute-api.ap-southeast-1.amazonaws.com/prod/";
       // get values from FORM
       var name = $("input#name").val();
       var email = $("input#email").val();
@@ -20,7 +21,7 @@ $(function() {
       $this = $("#sendMessageButton");
       $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
       $.ajax({
-        url: "././mail/contact_me.php",
+        url: URL,
         type: "POST",
         data: {
           name: name,
