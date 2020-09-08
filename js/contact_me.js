@@ -23,12 +23,13 @@ $(function() {
       $.ajax({
         url: URL,
         type: "POST",
-        data: {
+        data: JSON.stringify({
           name: name,
           phone: phone,
           email: email,
           message: message
-        },
+        }),
+        dataType: 'json',
         crossDomain: "true",
         cache: false,
         success: function() {
