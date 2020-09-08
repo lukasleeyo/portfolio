@@ -30,7 +30,7 @@ $(function() {
         url: URL,
         type: "POST",
         data: JSON.stringify(data),
-        dataType: 'jsonp',
+        dataType: 'json',
         crossDomain: "true",
         contentType: "application/json; charset=utf-8",
         cache: false,
