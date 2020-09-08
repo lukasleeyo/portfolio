@@ -33,6 +33,7 @@ $(function() {
         dataType: 'json',
         crossDomain: "true",
         contentType: "application/json; charset=utf-8",
+        headers: {  'Access-Control-Allow-Origin': '*' },
         cache: false,
         success: function() {
           // Success message
